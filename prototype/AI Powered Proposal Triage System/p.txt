@@ -1,0 +1,129 @@
+D:\Developer\AI Powered Proposal Triage System>node src/test-scoring.js
+
+--- ELIGIBILITY ---
+A Northshore Solar Ltd. eligible    
+B BrightPath Energy Inc. flagged    
+C Lakeview Renewables Corp. eligible
+D Essex Green Power Inc. eligible   
+E SunGrid Contractors Inc. eligible 
+
+--- SCORING RESULTS ---
+[
+  {
+    "contractorName": "Northshore Solar Ltd.",
+    "status": "ranked",
+    "rank": 1,
+    "score": 86.52,
+    "provisionalScore": 86.52,
+    "criterionScores": {
+      "experience": 70,
+      "price": 97.06,
+      "timeline": 100,
+      "warranty": 85,
+      "teamAndApproach": 90
+    },
+    "weightedScores": {
+      "experience": 21,
+      "price": 24.27,
+      "timeline": 15,
+      "warranty": 12.75,
+      "teamAndApproach": 13.5
+    },
+    "reviewNotes": []
+  },
+  {
+    "contractorName": "BrightPath Energy Inc.",
+    "status": "flagged",
+    "rank": null,
+    "score": null,
+    "provisionalScore": null,
+    "criterionScores": null,
+    "reviewNotes": [
+      "The subcontractor's licence is \"to be confirmed after contract award\".",
+      "Mandatory eligibility evidence requires human review.",
+      "Eligibility status is missing or invalid."
+    ]
+  },
+  {
+    "contractorName": "Lakeview Renewables Corp.",
+    "status": "flagged",
+    "rank": null,
+    "score": null,
+    "provisionalScore": 56.48,
+    "criterionScores": {
+      "experience": 0,
+      "price": 94.67,
+      "timeline": 85.71,
+      "warranty": 85,
+      "teamAndApproach": 48
+    },
+    "weightedScores": {
+      "experience": 0,
+      "price": 23.67,
+      "timeline": 12.86,
+      "warranty": 12.75,
+      "teamAndApproach": 7.2
+    },
+    "reviewNotes": [
+      "Recent qualifying installation experience needs confirmation.",
+      "Warehouse installation count is not stated; no warehouse bonus awarded.",
+      "Safety plan needs confirmation.",
+      "Monitoring plan duration is not stated."
+    ]
+  },
+  {
+    "contractorName": "Essex Green Power Inc.",
+    "status": "flagged",
+    "rank": null,
+    "score": null,
+    "provisionalScore": 45.25,
+    "criterionScores": {
+      "experience": 0,
+      "price": 100,
+      "timeline": 0,
+      "warranty": 85,
+      "teamAndApproach": 50
+    },
+    "weightedScores": {
+      "experience": 0,
+      "price": 25,
+      "timeline": 0,
+      "warranty": 12.75,
+      "teamAndApproach": 7.5
+    },
+    "reviewNotes": [
+      "Installation schedule is not fixed.",
+      "Recent qualifying installation experience needs confirmation.",
+      "Warehouse installation count is not stated; no warehouse bonus awarded.",
+      "A stated completion timeline is needed for scoring.",
+      "Crew size is not stated.",
+      "Monitoring plan duration is not stated."
+    ]
+  },
+  {
+    "contractorName": "SunGrid Contractors Inc.",
+    "status": "flagged",
+    "rank": null,
+    "score": null,
+    "provisionalScore": 79.97,
+    "criterionScores": {
+      "experience": 50,
+      "price": 95.26,
+      "timeline": 92.31,
+      "warranty": 87,
+      "teamAndApproach": 95
+    },
+    "weightedScores": {
+      "experience": 15,
+      "price": 23.82,
+      "timeline": 13.85,
+      "warranty": 13.05,
+      "teamAndApproach": 14.25
+    },
+    "reviewNotes": [
+      "Warehouse installation count is not stated; no warehouse bonus awarded."
+    ]
+  }
+]
+
+ok so this is the output , i can see issues with it contract a is ranked 1 but there are no notes for it there should be a note for human to see that why we ranked this 1, contract b looks fine to me, on proposal c the experience is 0 why we made the rule that if a company has commercial install experience of 100kw give them 50 and if they have 100kw + then award 10 for that and 5 for every like warehouse install capped to three but here it is 0 why this happened, in proposal d again missed the experience while it is stated, proposal e good  but we should be scring it not flagging it also warehouse install is not a criteria it is a bonus if someone doesnt mention it dont penalize them but if someone has that appreciate them in notes

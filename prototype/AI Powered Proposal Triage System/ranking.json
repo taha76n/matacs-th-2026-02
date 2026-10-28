@@ -1,0 +1,37 @@
+[
+  {
+    "proposal": "A",
+    "rank": 1,
+    "status": "ranked",
+    "score": 95.52,
+    "reason": "Proposal A: 14 commercial installations, $238,000 CAD, 12-week completion. Score: 95.52/100."
+  },
+  {
+    "proposal": "E",
+    "rank": 2,
+    "status": "ranked",
+    "score": 84.97,
+    "reason": "Proposal E: 8 commercial installations, $242,500 CAD, 13-week completion. Score: 84.97/100."
+  },
+  {
+    "proposal": "C",
+    "rank": 3,
+    "status": "ranked",
+    "score": 76.48,
+    "reason": "Proposal C: 9 commercial installations, $244,000 CAD, 14-week completion. Score: 76.48/100. Review note: Safety plan needs confirmation."
+  },
+  {
+    "proposal": "D",
+    "rank": 4,
+    "status": "ranked",
+    "score": 69.25,
+    "reason": "Proposal D: 11 commercial installations, $231,000 CAD, completion timeline not confirmed. Score: 69.25/100. Review note: A stated completion timeline is needed for scoring."
+  },
+  {
+    "proposal": "B",
+    "rank": null,
+    "status": "flagged",
+    "score": null,
+    "reason": "Proposal B is flagged: Eligibility evidence requires human review."
+  }
+]
